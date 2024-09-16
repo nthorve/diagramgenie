@@ -21,7 +21,11 @@ def generate_dot_and_image(text, temperature, top_p):
     return dot_text, image
 
 
-with gr.Blocks() as ui:
+with gr.Blocks(title='Diagram Genie',  theme=gr.themes.Soft()) as ui:
+    gr.Markdown("""
+    # Diagram Genie
+    Given a description of a network, this app generates a diagram of the network using Agentic LLM.
+    """)
     with gr.Row():
         with gr.Column():
             user_input = gr.Textbox(
@@ -29,10 +33,9 @@ with gr.Blocks() as ui:
                 placeholder="Describe your network here...",
                 lines=20,
             )
-            temperature = gr.Slider(
-                minimum=0, maximum=1, step=0.1, label="Temperature", value=0
-            )
-            top_p = gr.Slider(minimum=0, maximum=1, step=0.1, label="Max P", value=1.0)
+            with gr.Accordion("Model Settings", open=False):
+                temperature = gr.Slider(minimum=0, maximum=1, step=0.1, label="Temperature", value=0)
+                top_p = gr.Slider(minimum=0, maximum=1, step=0.1, label="Max P", value=1.0)
         with gr.Column():
             dot_output = gr.Textbox(
                 label="Dot Language Text",

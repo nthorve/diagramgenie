@@ -6,10 +6,71 @@ Follow the below guidelines while generating the dot format.
 1. Use colors and shapes to distinguish different components in the architecture.
 2. Position the labels so that the labels don't overlap.
 3. Use colors from the below list
-aliceblue,antiquewhite,aqua,aquamarine,azure,beige,bisque,blanchedalmond,blue,blueviolet,brown,burlywood,cadetblue,chartreuse,chocolate,coral,cornflowerblue,cornsilk,crimson,cyan,darkblue,darkcyan,darkgoldenrod,darkgray,darkgrey,darkkhaki,darkmagenta,darkorange,darkorchid,darkred,darksalmon,darkseagreen,darkslateblue,darkturquoise,darkviolet,deeppink,deepskyblue,dodgerblue,firebrick,floralwhite,forestgreen,fuchsia,gainsboro,ghostwhite,gold,goldenrod,greenyellow,honeydew,hotpink,indianred,ivory,khaki,lavender,lavenderblush,lawngreen,lemonchiffon,lightblue,lightcoral,lightcyan,lightgoldenrodyellow,lightgray,lightgreen,lightgrey,lightpink,lightsalmon,lightseagreen,lightskyblue,lightslategray,lightslategrey,lightsteelblue,lightyellow,lime,limegreen,linen,magenta,mediumaquamarine,mediumblue,mediumorchid,mediumpurple,mediumseagreen,mediumslateblue,mediumspringgreen,mediumturquoise,mediumvioletred,mintcream,mistyrose,moccasin,navajowhite,oldlace,olivedrab,orange,orangered,orchid,palegoldenrod,palegreen,paleturquoise,palevioletred,papayawhip,peachpuff,peru,pink,plum,powderblue,red,rosybrown,royalblue,saddlebrown,salmon,sandybrown,seagreen,seashell,sienna,silver,skyblue,slateblue,slategray,slategrey,snow,springgreen,steelblue,tan,thistle,tomato,turquoise,violet,wheat,white,whitesmoke,yellow,yellowgreen
+    - aliceblue,antiquewhite,aqua,aquamarine,azure,beige,bisque,blanchedalmond,blue,blueviolet,brown,burlywood,cadetblue,chartreuse,chocolate,coral,cornflowerblue,cornsilk,crimson,cyan,darkblue,darkcyan,darkgoldenrod,darkgray,darkgrey,darkkhaki,darkmagenta,darkorange,darkorchid,darkred,darksalmon,darkseagreen,darkslateblue,darkturquoise,darkviolet,deeppink,deepskyblue,dodgerblue,firebrick,floralwhite,forestgreen,fuchsia,gainsboro,ghostwhite,gold,goldenrod,greenyellow,honeydew,hotpink,indianred,ivory,khaki,lavender,lavenderblush,lawngreen,lemonchiffon,lightblue,lightcoral,lightcyan,lightgoldenrodyellow,lightgray,lightgreen,lightgrey,lightpink,lightsalmon,lightseagreen,lightskyblue,lightslategray,lightslategrey,lightsteelblue,lightyellow,lime,limegreen,linen,magenta,mediumaquamarine,mediumblue,mediumorchid,mediumpurple,mediumseagreen,mediumslateblue,mediumspringgreen,mediumturquoise,mediumvioletred,mintcream,mistyrose,moccasin,navajowhite,oldlace,olivedrab,orange,orangered,orchid,palegoldenrod,palegreen,paleturquoise,palevioletred,papayawhip,peachpuff,peru,pink,plum,powderblue,red,rosybrown,royalblue,saddlebrown,salmon,sandybrown,seagreen,seashell,sienna,silver,skyblue,slateblue,slategray,slategrey,snow,springgreen,steelblue,tan,thistle,tomato,turquoise,violet,wheat,white,whitesmoke,yellow,yellowgreen
+4. Use the images in the nodes to represent the components as per below list and use quotes around the path.
+    - Use the image file imgs\Application-Gateway-Containers.png to add image to the node to represent Application-Gateway-Containers.
+    - Use the image file imgs\Application-Gateways.png to add image to the node to represent Application-Gateways.
+    - Use the image file imgs\ATM-Multistack.png to add image to the node to represent ATM-Multistack.
+    - Use the image file imgs\Azure-Communications-Gateway.png to add image to the node to represent Azure-Communications-Gateway.
+    - Use the image file imgs\Azure-Firewall-Manager.png to add image to the node to represent Azure-Firewall-Manager.
+    - Use the image file imgs\Azure-Firewall-Policy.png to add image to the node to represent Azure-Firewall-Policy.
+    - Use the image file imgs\Bastions.png to add image to the node to represent Bastions.
+    - Use the image file imgs\CDN-Profiles.png to add image to the node to represent CDN-Profiles.
+    - Use the image file imgs\Connected-Cache.png to add image to the node to represent Connected-Cache.
+    - Use the image file imgs\Connections.png to add image to the node to represent Connections.
+    - Use the image file imgs\DDoS-Protection-Plans.png to add image to the node to represent DDoS-Protection-Plans.
+    - Use the image file imgs\DNS-Multistack.png to add image to the node to represent DNS-Multistack.
+    - Use the image file imgs\DNS-Private-Resolver.png to add image to the node to represent DNS-Private-Resolver.
+    - Use the image file imgs\DNS-Security-Policy.png to add image to the node to represent DNS-Security-Policy.
+    - Use the image file imgs\DNS-Zones.png to add image to the node to represent DNS-Zones.
+    - Use the image file imgs\ExpressRoute-Circuits.png to add image to the node to represent ExpressRoute-Circuits.
+    - Use the image file imgs\Firewalls.png to add image to the node to represent Firewalls.
+    - Use the image file imgs\Front-Door-and-CDN-Profiles.png to add image to the node to represent Front-Door-and-CDN-Profiles.
+    - Use the image file imgs\IP-Address-manager.png to add image to the node to represent IP-Address-manager.
+    - Use the image file imgs\IP-Groups.png to add image to the node to represent IP-Groups.
+    - Use the image file imgs\Load-Balancer-Hub.png to add image to the node to represent Load-Balancer-Hub.
+    - Use the image file imgs\Load-Balancers.png to add image to the node to represent Load-Balancers.
+    - Use the image file imgs\Local-Network-Gateways.png to add image to the node to represent Local-Network-Gateways.
+    - Use the image file imgs\NAT.png to add image to the node to represent NAT.
+    - Use the image file imgs\Network-Interfaces.png to add image to the node to represent Network-Interfaces.
+    - Use the image file imgs\Network-Security-Groups.png to add image to the node to represent Network-Security-Groups.
+    - Use the image file imgs\Network-Watcher.png to add image to the node to represent Network-Watcher.
+    - Use the image file imgs\On-Premises-Data-Gateways.png to add image to the node to represent On-Premises-Data-Gateways.
+    - Use the image file imgs\Private-Link-Service.png to add image to the node to represent Private-Link-Service.
+    - Use the image file imgs\Private-Link-Services.png to add image to the node to represent Private-Link-Services.
+    - Use the image file imgs\Private-Link.png to add image to the node to represent Private-Link.
+    - Use the image file imgs\Proximity-Placement-Groups.png to add image to the node to represent Proximity-Placement-Groups.
+    - Use the image file imgs\Public-IP-Addresses-(Classic).png to add image to the node to represent Public-IP-Addresses-(Classic).
+    - Use the image file imgs\Public-IP-Addresses.png to add image to the node to represent Public-IP-Addresses.
+    - Use the image file imgs\Public-IP-Prefixes.png to add image to the node to represent Public-IP-Prefixes.
+    - Use the image file imgs\Reserved-IP-Addresses-(Classic).png to add image to the node to represent Reserved-IP-Addresses-(Classic).
+    - Use the image file imgs\Resource-Management-Private-Link.png to add image to the node to represent Resource-Management-Private-Link.
+    - Use the image file imgs\Route-Filters.png to add image to the node to represent Route-Filters.
+    - Use the image file imgs\Route-Tables.png to add image to the node to represent Route-Tables.
+    - Use the image file imgs\Service-Endpoint-Policies.png to add image to the node to represent Service-Endpoint-Policies.
+    - Use the image file imgs\Spot-VM.png to add image to the node to represent Spot-VM.
+    - Use the image file imgs\Spot-VMSS.png to add image to the node to represent Spot-VMSS.
+    - Use the image file imgs\Subnet.png to add image to the node to represent Subnet.
+    - Use the image file imgs\Traffic-Manager-Profiles.png to add image to the node to represent Traffic-Manager-Profiles.
+    - Use the image file imgs\Virtual-Network-Gateways.png to add image to the node to represent Virtual-Network-Gateways.
+    - Use the image file imgs\Virtual-Networks-(Classic).png to add image to the node to represent Virtual-Networks-(Classic).
+    - Use the image file imgs\Virtual-Networks.png to add image to the node to represent Virtual-Networks.
+    - Use the image file imgs\Virtual-Router.png to add image to the node to represent Virtual-Router.
+    - Use the image file imgs\Virtual-WAN-Hub.png to add image to the node to represent Virtual-WAN-Hub.
+    - Use the image file imgs\Virtual-WANs.png to add image to the node to represent Virtual-WANs.
+    - Use the image file imgs\Web-Application-Firewall-Policies(WAF).png to add image to the node to represent Web-Application-Firewall-Policies(WAF).
+
 Do not generate any additional text outside the JSON in your response. The JSON should be syntactically correct and properly formatted. 
 
-For example: 
+Output Specification:
 {
     "dot_file": "<value1>"
+}
+
+Example 1:
+User Input: 
+Create a dot file to represent the below user flow : Create an Expressroute tunnel "EXR1" from Azure "VNET1" to On premises DC "MumbaiHQ". Create a coexisting Site to Site VPN from VPN Gateway "VNG1" in Azure "VNET1" to On premises DC "MumbaiHQ".
+Output:
+{
+    "dot_file": "\ndigraph user_flow {\n\nnode[shape=box, style=filled, color=white];\n        Azure_VNET1[label=<VNET1>, image=\"imgs\\Virtual-Networks.png\"];\n        On_Premises_DC_MumbaiHQ[label=<MumbaiHQ>];\n        Expressroute_Tunnel_EXR1[label=<EXR1>, image=\"imgs\\ExpressRoute-Circuits.png\"];\n        VPN_Gateway_VNG1[label=<VNG1>, image=\"imgs\\Virtual-Network-Gateways.png\"];\n        Site_to_Site_VPN[label=<Site to Site VPN>];\n\n        Azure_VNET1 -> Expressroute_Tunnel_EXR1[label=<Create Expressroute tunnel>];\n        Expressroute_Tunnel_EXR1 -> On_Premises_DC_MumbaiHQ[label=<Connect to On premises DC>];\n        Azure_VNET1 -> VPN_Gateway_VNG1[label=<Create VPN Gateway>];\n        VPN_Gateway_VNG1 -> Site_to_Site_VPN[label=<Create Site to Site VPN>];\n        Site_to_Site_VPN -> On_Premises_DC_MumbaiHQ[label=<Connect to On premises DC>];\n}\n"
 }

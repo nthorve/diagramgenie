@@ -13,6 +13,7 @@ class AzureInference:
         headers = {
             "Content-Type": "application/json",
             "Authorization": ("Bearer " + self.key),
+            # "api-key": self.key
         }
         req = urllib.request.Request(self.url, body, headers)
         try:
