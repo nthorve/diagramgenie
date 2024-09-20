@@ -4,7 +4,7 @@ Your task is to generate the architecture diagram in dot format based on the giv
 
 Follow the below guidelines while generating the dot format.
 1. Use colors and shapes to distinguish different components in the architecture.
-2. Position the labels so that the labels don't overlap.
+2. Position the labels so that the labels don't overlap, use different colors to differentitate the labels.
 3. Use colors from the below list
     - aliceblue,antiquewhite,aqua,aquamarine,azure,beige,bisque,blanchedalmond,blue,blueviolet,brown,burlywood,cadetblue,chartreuse,chocolate,coral,cornflowerblue,cornsilk,crimson,cyan,darkblue,darkcyan,darkgoldenrod,darkgray,darkgrey,darkkhaki,darkmagenta,darkorange,darkorchid,darkred,darksalmon,darkseagreen,darkslateblue,darkturquoise,darkviolet,deeppink,deepskyblue,dodgerblue,firebrick,floralwhite,forestgreen,fuchsia,gainsboro,ghostwhite,gold,goldenrod,greenyellow,honeydew,hotpink,indianred,ivory,khaki,lavender,lavenderblush,lawngreen,lemonchiffon,lightblue,lightcoral,lightcyan,lightgoldenrodyellow,lightgray,lightgreen,lightgrey,lightpink,lightsalmon,lightseagreen,lightskyblue,lightslategray,lightslategrey,lightsteelblue,lightyellow,lime,limegreen,linen,magenta,mediumaquamarine,mediumblue,mediumorchid,mediumpurple,mediumseagreen,mediumslateblue,mediumspringgreen,mediumturquoise,mediumvioletred,mintcream,mistyrose,moccasin,navajowhite,oldlace,olivedrab,orange,orangered,orchid,palegoldenrod,palegreen,paleturquoise,palevioletred,papayawhip,peachpuff,peru,pink,plum,powderblue,red,rosybrown,royalblue,saddlebrown,salmon,sandybrown,seagreen,seashell,sienna,silver,skyblue,slateblue,slategray,slategrey,snow,springgreen,steelblue,tan,thistle,tomato,turquoise,violet,wheat,white,whitesmoke,yellow,yellowgreen
 4. Use the images in the nodes to represent the components as per below list and use quotes around the path.
@@ -69,8 +69,18 @@ Output Specification:
 
 Example 1:
 User Input: 
-Create a dot file to represent the below user flow : Create an Expressroute tunnel "EXR1" from Azure "VNET1" to On premises DC "MumbaiHQ". Create a coexisting Site to Site VPN from VPN Gateway "VNG1" in Azure "VNET1" to On premises DC "MumbaiHQ".
+Azure VNET "VNET1" has Azure Firewall "FW1" and Azure VPN Gateway "VNG1". On premises data canter "DC1" has Firewall "FW2". Site to Site VPN connection between "VNG1" and "FW2".
 Output:
-{
-    "dot_file": "\ndigraph user_flow {\n\nnode[shape=box, style=filled, color=white];\n        Azure_VNET1[label=<VNET1>, image=\"imgs\\Virtual-Networks.png\"];\n        On_Premises_DC_MumbaiHQ[label=<MumbaiHQ>];\n        Expressroute_Tunnel_EXR1[label=<EXR1>, image=\"imgs\\ExpressRoute-Circuits.png\"];\n        VPN_Gateway_VNG1[label=<VNG1>, image=\"imgs\\Virtual-Network-Gateways.png\"];\n        Site_to_Site_VPN[label=<Site to Site VPN>];\n\n        Azure_VNET1 -> Expressroute_Tunnel_EXR1[label=<Create Expressroute tunnel>];\n        Expressroute_Tunnel_EXR1 -> On_Premises_DC_MumbaiHQ[label=<Connect to On premises DC>];\n        Azure_VNET1 -> VPN_Gateway_VNG1[label=<Create VPN Gateway>];\n        VPN_Gateway_VNG1 -> Site_to_Site_VPN[label=<Create Site to Site VPN>];\n        Site_to_Site_VPN -> On_Premises_DC_MumbaiHQ[label=<Connect to On premises DC>];\n}\n"
-}
+{"dot_file": "\ndigraph UserFlow {\n    subgraph cluster_azure {\n        label=\"Azure\";\n        VNET1 [label=\"VNET1\"];\n        LB1 [label=\"LB1\"];\n        VM1 [label=\"VM1\"];\n        VM2 [label=\"VM2\"];\n        VM3 [label=\"VM3\"];\n        VNET1 -> LB1;\n        LB1 -> VM1;\n        LB1 -> VM2;\n        LB1 -> VM3;\n    }\n}"}
+
+Example 2:
+User Input:
+Azure VNET "VNET1" has Azure Firewall "FW1" and Azure VPN Gateway "VNG1". On premises data canter "DC1" has Firewall "FW2". Site to Site VPN connection between "VNG1" and "FW2".
+Output:
+{'dot_file': '\ndigraph UserFlow {\n    subgraph cluster_azure {\n        label="Azure";\n        VNET1 [label="VNET1"];\n        FW1 [label="FW1"];\n        VNG1 [label="VNG1"];\n    }\n    subgraph cluster_onprem {\n        label="On-Premises";\n        DC1 [label="DC1"];\n        FW2 [label="FW2"];        \n    }\n    VNG1 -> FW2 [label="Site to Site VPN"];\n}'}
+
+Example 3:
+User Input:
+Azure VNET "VNET1" has Load balancer "LB1". "LB1" has backend pool "VM1" "VM3" and "VM3" in same VNET.
+Output:
+{"dot_file": "\ndigraph UserFlow {\n    subgraph cluster_azure {\n        label=\"Azure\";\n        VNET1 [label=\"VNET1\"];\n        LB1 [label=\"LB1\"];\n        VM1 [label=\"VM1\"];\n        VM2 [label=\"VM2\"];\n        VM3 [label=\"VM3\"];\n        VNET1 -> LB1;\n        LB1 -> VM1;\n        LB1 -> VM2;\n        LB1 -> VM3;\n    }\n}"}

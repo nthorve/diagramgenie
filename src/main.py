@@ -34,8 +34,8 @@ with gr.Blocks(title='Diagram Genie',  theme=gr.themes.Soft()) as ui:
                 lines=20,
             )
             with gr.Accordion("Model Settings", open=False):
-                temperature = gr.Slider(minimum=0, maximum=1, step=0.1, label="Temperature", value=0)
-                top_p = gr.Slider(minimum=0, maximum=1, step=0.1, label="Max P", value=1.0)
+                temperature = gr.Slider(minimum=0, maximum=1, step=0.1, label="Temperature", value=0.6)
+                top_p = gr.Slider(minimum=0, maximum=1, step=0.1, label="Max P", value=0.9)
         with gr.Column():
             dot_output = gr.Textbox(
                 label="Dot Language Text",
